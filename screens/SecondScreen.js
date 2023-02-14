@@ -1,5 +1,5 @@
 import { StatusBar } from "expo-status-bar";
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { StyleSheet, Button, View, Text, Animated } from "react-native";
 import { StackActions } from "@react-navigation/native";
 import DatePicker from "react-native-modern-datepicker";
@@ -8,6 +8,13 @@ import { FadeInView } from "../components/FadeInView";
 export default function SecondScreen({ navigation, route }) {
   // let language = route.params.language;
   // let greeting = language === "french" ? "Bonjour" : "Hello";
+  const today = new Date().toLocaleDateString('en-us', { year:"numeric", month:"numeric", day:"numeric"}).split('/');
+
+
+  const [date, setDate] = useState(`${today[2]}/${today[0]}/${today[1]}`) ;
+  
+  
+
   return (
     <View style={styles.View}>
       {/* <Text>{greeting}</Text> */}
@@ -36,8 +43,10 @@ export default function SecondScreen({ navigation, route }) {
           textSecondaryColor: "#D6C7A1",
           borderColor: "rgba(122, 146, 165, 0.1)",
         }}
-        current="2023-07-13"
-        selected="2020-07-23"
+        
+        selected={date}
+        date={date} 
+        onDateChange={setDate}
         mode="calendar"
         minuteInterval={30}
         style={{ borderRadius: 10 }}
@@ -66,9 +75,6 @@ const styles = StyleSheet.create({
     fontSize: 28,
     textAlign: "center",
     margin: 50,
-  },
-  Button: {
-    
   },
   FadeInView: {
     marginTop: 50,
