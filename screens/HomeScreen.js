@@ -1,45 +1,62 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Button, View, Text, Pressable } from 'react-native';
+import { StatusBar } from "expo-status-bar";
+import React, { useRef, useEffect } from "react";
+import { StyleSheet, Button, View, Text, Animated } from "react-native";
 
 export default function HomeScreen({ navigation }) {
   return (
-    <View style={styles.container}>
-      <Text style={styles.text}>
-        What is your doomsday?
-        
-      </Text>
-      <Pressable style={styles.pressable} onPress={() => navigation.navigate("Second", { language: "french" })}> 
-            <Text>
-                I want to find out
-            </Text>
-      </Pressable>
-      {/* <Button 
-        title="I want to find out"
-        onPress={() => navigation.navigate("Second", { language: "french" })}
-      /> */}
-      {/* <Button 
-        title="Navigate to second screen with english"
-        onPress={() => navigation.navigate("Second", { language: "english" })}
-      /> */}
-      <StatusBar style="auto" />
+    <View style={styles.View}>
+      <FadeInView style={styles.FadeInView}>
+        <Text style={styles.Text}>What is your doomsday?</Text>
+        <Button
+          style={styles.Button}
+          title="Start"
+          onPress={() => navigation.navigate("Second", { language: "french" })}
+        />
+      </FadeInView>
     </View>
   );
 }
+// http://reactnative.dev/docs/animations
+const FadeInView = (props) => {
+  const fadeAnim = useRef(new Animated.Value(0)).current; // Initial value for opacity: 0
+
+  useEffect(() => {
+    Animated.timing(fadeAnim, {
+      toValue: 1,
+      duration: 10000,
+      useNativeDriver: true,
+    }).start();
+  }, [fadeAnim]);
+
+  return (
+    <Animated.View // Special animatable View
+      style={{
+        ...props.style,
+        opacity: fadeAnim, // Bind opacity to animated value
+      }}
+    >
+      {props.children}
+    </Animated.View>
+  );
+};
 
 const styles = StyleSheet.create({
-  container: {
+  View: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-    
+    alignItems: "center",
+    justifyContent: "center",
   },
-  text: {
-    marginBottom: 200,
-    fontSize: 30,
+  Text: {
+    fontSize: 28,
+    textAlign: "center",
+    margin: 50,
   },
-  pressable: {
-    color: 
-    marginBottom: 150,
+  Button: {
+    backgroundColor: "#1E6738",
+    textAlign: "center",
+  },
+  FadeInView: {
+    width: 500,
+    height: 200,
   },
 });
