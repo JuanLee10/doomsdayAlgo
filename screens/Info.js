@@ -3,11 +3,13 @@ import React, { useRef, useEffect } from "react";
 import { StyleSheet, Button, View, Text, Animated } from "react-native";
 import { FadeInView } from "../components/FadeInView";
 
-export default function HomeScreen({ navigation }) {
-  return (
+export default function InfoScreen({ navigation , route }) {
+    let selectedDate = route.params.date;
+    
+    return (
     <View style={styles.View}>
       <FadeInView style={styles.FadeInView}>
-        <Text style={styles.Text}>What is your doomsday?</Text>
+        <Text style={styles.Text}>{selectedDate}</Text>
         <Button
           style={styles.Button}
           title="Start"

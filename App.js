@@ -1,6 +1,7 @@
 import HomeScreen from "./screens/HomeScreen";
-import SecondScreen from "./screens/SecondScreen";
-import ThirdScreen from "./screens/ThirdScreen";
+import BirthdayScreen from "./screens/Birthday";
+import ResultScreen from "./screens/Result";
+import InfoScreen from "./screens/Info";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
@@ -16,13 +17,18 @@ export default function App() {
           options={{headerShown: false}}
         />
         <Stack.Screen 
-          name="Second"
-          component={SecondScreen}
-          
+          name="Birthday"
+          component={BirthdayScreen}
+          options={{headerShown: false}}
         />
         <Stack.Screen 
-          name="Third"
-          component={ThirdScreen}
+          name="Result"
+          component={ResultScreen}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen 
+          name="Info"
+          component={InfoScreen}
           options={{headerShown: false}}
         />
       </Stack.Navigator>

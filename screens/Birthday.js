@@ -5,7 +5,7 @@ import { StackActions } from "@react-navigation/native";
 import DatePicker from "react-native-modern-datepicker";
 import { FadeInView } from "../components/FadeInView";
 
-export default function SecondScreen({ navigation, route }) {
+export default function BirthdayScreen({ navigation, route }) {
   // let language = route.params.language;
   // let greeting = language === "french" ? "Bonjour" : "Hello";
   const today = new Date().toLocaleDateString('en-us', { year:"numeric", month:"numeric", day:"numeric"}).split('/');
@@ -30,8 +30,8 @@ export default function SecondScreen({ navigation, route }) {
           );
         }}
       /> */}
-      <FadeInView >
-        <Text style={styles.Text}>What is your birthday?</Text>
+      <FadeInView>
+        <Text style={styles.Text}>When is your birthday?</Text>
       </FadeInView>
       <DatePicker
         options={{
@@ -51,11 +51,16 @@ export default function SecondScreen({ navigation, route }) {
         minuteInterval={30}
         style={{ borderRadius: 10 }}
       />
-      <FadeInView style={styles.FadeInView}>
+      <FadeInView style={styles.FadeInViewButtons}>
         <Button
             style={styles.Button}
             title="Submit"
-            onPress={() => navigation.navigate("Second", { language: "french" })}
+            onPress={() => navigation.navigate("Result", { date: date })}
+          />
+        <Button
+            style={styles.Button}
+            title="Skip"
+            onPress={() => navigation.navigate("Info", { language: "french" })}
           />
       </FadeInView>
       <StatusBar style="auto" />
@@ -69,14 +74,14 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
-    bottom: 50
   },
   Text: {
     fontSize: 28,
     textAlign: "center",
     margin: 50,
   },
-  FadeInView: {
-    marginTop: 50,
-  }
+  FadeInViewButtons: {
+    margin: 30,
+  },
+  
 });
