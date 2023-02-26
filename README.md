@@ -28,6 +28,7 @@ Include logo/demo screenshot etc. -->
 - [React Native](https://reactnative.dev)
 - [Node](https://nodejs.org/en)
 - [Expo](https://expo.dev/client)
+- [Animated API](https://reactnative.dev/docs/animations)
 
 ## Features
 The application allows users to input their birthday and figure out what day of the week they were born on. Then it gives the users an 
