@@ -1,6 +1,6 @@
 # doomsdayAlgo
 
-This is the React Native project for Doomsday Algorithm.
+I am excited to showcase my React Native project which aims to provide information about the Doomsday Algorithm.
 
 ## Motivation
 <!-- A short description of the motivation behind the creation and maintenance of the project. This should explain **why** the project exists. -->
