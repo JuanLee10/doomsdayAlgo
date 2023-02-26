@@ -8,28 +8,18 @@ import { FadeInView } from "../components/FadeInView";
 export default function BirthdayScreen({ navigation, route }) {
   // let language = route.params.language;
   // let greeting = language === "french" ? "Bonjour" : "Hello";
-  const today = new Date().toLocaleDateString('en-us', { year:"numeric", month:"numeric", day:"numeric"}).split('/');
+  const today = new Date()
+    .toLocaleDateString("en-us", {
+      year: "numeric",
+      month: "numeric",
+      day: "numeric",
+    })
+    .split("/");
 
-
-  const [date, setDate] = useState(`${today[2]}/${today[0]}/${today[1]}`) ;
-  
-  
+  const [date, setDate] = useState(`${today[2]}/${today[0]}/${today[1]}`);
 
   return (
     <View style={styles.View}>
-      {/* <Text>{greeting}</Text> */}
-      {/* <Button 
-        title='Go to Third Screen'
-        onPress={() => navigation.push("Third")}
-      />
-      <Button 
-        title='Go to Third Screen with Replace'
-        onPress={() => {
-          navigation.dispatch(
-            StackActions.replace("Third")
-          );
-        }}
-      /> */}
       <FadeInView>
         <Text style={styles.Text}>When is your birthday?</Text>
       </FadeInView>
@@ -43,9 +33,8 @@ export default function BirthdayScreen({ navigation, route }) {
           textSecondaryColor: "#D6C7A1",
           borderColor: "rgba(122, 146, 165, 0.1)",
         }}
-        
         selected={date}
-        date={date} 
+        date={date}
         onDateChange={setDate}
         mode="calendar"
         minuteInterval={30}
@@ -53,21 +42,15 @@ export default function BirthdayScreen({ navigation, route }) {
       />
       <FadeInView style={styles.FadeInViewButtons}>
         <Button
-            style={styles.Button}
-            title="Submit"
-            onPress={() => navigation.navigate("Result", { date: date })}
-          />
-        <Button
-            style={styles.Button}
-            title="Skip"
-            onPress={() => navigation.navigate("Info", { language: "french" })}
-          />
+          style={styles.Button}
+          title="Submit"
+          onPress={() => navigation.navigate("Result", { date: date })}
+        />
       </FadeInView>
       <StatusBar style="auto" />
     </View>
   );
 }
-
 
 const styles = StyleSheet.create({
   View: {
@@ -83,5 +66,4 @@ const styles = StyleSheet.create({
   FadeInViewButtons: {
     margin: 30,
   },
-  
 });
