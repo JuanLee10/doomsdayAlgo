@@ -41,7 +41,7 @@ In order to host the project locally, follow these steps in your own terminal.
     npm install
     npm start
 
-Afterwards press i (ios) a (android). I used expo go and iphone simulator from xcode. 
+Afterwards press i for ios or a for android. I used expo go and iphone simulator from xcode. 
 
 [For ios simulator help click here](https://youtu.be/VozPNrt-LfE?t=2253)
 
