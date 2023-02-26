@@ -27,7 +27,7 @@ Include logo/demo screenshot etc. -->
 - [React](https://reactjs.org)
 - [React Native](https://reactnative.dev)
 - [Node](https://nodejs.org/en)
-- [Expo] (https://expo.dev/client)
+- [Expo](https://expo.dev/client)
 
 ## Features
 The application allows users to input their birthday and figure out what day of the week they were born on. Then it gives the users an 
@@ -43,8 +43,8 @@ In order to host the project locally, follow these steps in your own terminal.
 
 Afterwards press i (ios) a (android). I used expo go and iphone simulator from xcode. 
 
-[For ios simulator help click here] (https://youtu.be/VozPNrt-LfE?t=2253)
-[For android simulator help click here] (https://youtu.be/VozPNrt-LfE?t=1874)
+[For ios simulator help click here](https://youtu.be/VozPNrt-LfE?t=2253)
+[For android simulator help click here](https://youtu.be/VozPNrt-LfE?t=1874)
 
 ## Future directions
 
