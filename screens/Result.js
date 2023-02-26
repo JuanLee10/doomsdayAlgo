@@ -67,7 +67,6 @@ function getResults(selectedDate) {
 
   const result = `${resultStr}${year2Digits} / 12 = ${calc1}
   2. Get the difference between the years last 2 digits and the previous result * 12 : ${year2Digits} - (${calc1} * 12) = ${calc2}
-  
   3. Divide previous result by 4 : ${calc2} / 4 = ${calc3}
   4. Add all results plus the anchor day value : ${calc1} + ${calc2} + ${calc3} + ${anchorNum} = ${calc4}
   5. Take the modulus of 7 from the previous result to get Doomsday : ${calc4} % 7 = ${calc5} (${
@@ -112,7 +111,7 @@ const styles = StyleSheet.create({
     bottom: 80,
   },
   Text: {
-    fontSize: 15,
+    fontSize: 17,
     textAlign: "center",
     margin: 50,
     adjustsFontSizeToFit: true,
