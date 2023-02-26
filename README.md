@@ -31,7 +31,7 @@ Include logo/demo screenshot etc. -->
 - [Animated API](https://reactnative.dev/docs/animations)
 
 ## Features
-The application allows users to input their birthday and figure out what day of the week they were born on. Then it gives the users an 
+The application allows users to input their birthday and figure out what day of the week they were born on from years 1100+. Then it gives the users an 
 detailed explanation for how the calculation can be done in their own heads.
 
 ## How to use?
