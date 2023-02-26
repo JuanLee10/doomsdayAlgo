@@ -44,6 +44,7 @@ In order to host the project locally, follow these steps in your own terminal.
 Afterwards press i (ios) a (android). I used expo go and iphone simulator from xcode. 
 
 [For ios simulator help click here](https://youtu.be/VozPNrt-LfE?t=2253)
+
 [For android simulator help click here](https://youtu.be/VozPNrt-LfE?t=1874)
 
 ## Future directions
