@@ -5,9 +5,7 @@ This is the React Native project for Doomsday Algorithm.
 ## Motivation
 <!-- A short description of the motivation behind the creation and maintenance of the project. This should explain **why** the project exists. -->
 
-Wanting to learn more about React Native and to spread awareness about the doomsday algorithm.
-
-[(Backend Application)](https://github.com/JuanLee10/fb-backend). 
+Wanting to learn more about React Native and to spread awareness about the doomsday algorithm. 
 
 <!-- ## Build status
 Build status of continus integration i.e. travis, appveyor etc. Ex. - 
@@ -26,7 +24,6 @@ Include logo/demo screenshot etc. -->
 ## Tech/framework used
 
 ### Built with
-<b>Frontend:</b>
 - [React](https://reactjs.org)
 - [React Native](https://reactnative.dev)
 - [Node](https://nodejs.org/en)
@@ -38,7 +35,7 @@ detailed explanation for how the calculation can be done in their own heads.
 ## How to use?
 In order to host the project locally, follow these steps
 
-    git clone https://github.com/JuanLee10/fb-frontend.git
+    git clone https://github.com/JuanLee10/doomsdayAlgo.git
     cd doomsdayAlgo
     npm install
     npm start
